@@ -8,8 +8,6 @@ import styles from "./styles";
 
 import banner from "../../../assets/cadastrar/banner.png";
 import { Button, Card, Checkbox, TextInput, Title } from "react-native-paper";
-import DatePicker from "../../components/DatePicker";
-import { set } from "react-native-reanimated";
 
 export default function Register({ setUserLogged, navigation }: RegisterProps) {
   const [name, setName] = useState<string>("");
@@ -61,6 +59,18 @@ export default function Register({ setUserLogged, navigation }: RegisterProps) {
             mode="outlined"
             value={name}
             onChangeText={setName}
+          />
+          <TextInput
+            label="Data de nascimento"
+            mode="outlined"
+            value={birthDate}
+            onChangeText={setBirthDate}
+          />
+          <TextInput
+            label="Gênero"
+            mode="outlined"
+            value={gender}
+            onChangeText={setGender}
           />
           <TextInput
             label="CPF"

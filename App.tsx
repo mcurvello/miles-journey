@@ -1,18 +1,19 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from "react-native";
 import { Provider } from "react-native-paper";
-import Home from "./src/pages/Home";
-import Profile from "./src/pages/Profile";
-import Login from "./src/pages/Login";
 import theme from "./src/config/theme";
 import { NavigationContainer } from "@react-navigation/native";
-import Register from "./src/pages/Register";
+import { SnackbarProvider } from "./src/contexts/Snackbar";
+import Routes from "./src/routes";
 
 export default function App() {
   return (
     <Provider theme={theme}>
-      <NavigationContainer>
-        <Register />
-      </NavigationContainer>
+      <SnackbarProvider>
+        <NavigationContainer>
+          <StatusBar />
+          <Routes />
+        </NavigationContainer>
+      </SnackbarProvider>
     </Provider>
   );
 }
