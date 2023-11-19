@@ -65,7 +65,7 @@ export default function Login({ navigation, setUserLogged }: LoginProps) {
             <Text style={styles.cadastrar}>Ainda não possui sua conta?</Text>
             <Text
               style={styles.cadastrarLink}
-              onPress={() => navigation.navigate("Cadastrar")}
+              onPress={() => navigation.navigate("Register")}
             >
               Clique aqui para se cadastrar!
             </Text>
